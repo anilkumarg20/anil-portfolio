@@ -1,0 +1,176 @@
+/* ============================================================= */
+/* MAIN LAYOUT (Same Theme)                                      */
+/* ============================================================= */
+.contact-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b0e13;
+  padding: 120px 0px;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Title */
+.contact-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00e1ff, #0087ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  text-align: center;
+  font-size: 18px;
+  color: #c4c4c4;
+  margin-bottom: 60px;
+}
+
+/* ============================================================= */
+/* CONTENT GRID                                                   */
+/* ============================================================= */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================================= */
+/* INFO CARD                                                      */
+/* ============================================================= */
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #1f2937;
+  padding: 40px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 225, 255, 0.08);
+  
+}
+
+.contact-info-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00e1ff;
+}
+
+.info-item {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+.info-item span {
+  color: #00e1ff;
+}
+
+/* Social buttons */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  background: rgba(0, 225, 255, 0.1);
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #00e1ff55;
+  color: #00e1ff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #00e1ff;
+  color: #000;
+}
+
+/* ============================================================= */
+/* CONTACT FORM                                                   */
+/* ============================================================= */
+.contact-form {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #1f2937;
+  padding: 40px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 225, 255, 0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #c4c4c4;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00e1ff33;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00e1ff;
+  box-shadow: 0 0 12px #00e1ff55;
+}
+
+/* ============================================================= */
+/* BUTTON                                                         */
+/* ============================================================= */
+.contact-btn {
+  width: 100%;
+  padding: 14px 36px;
+  background: linear-gradient(120deg, #00e1ff, #005b68);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  opacity: 0.5;
+  transform: skewX(-25deg);
+  animation: shineMove 3s infinite;
+}
+
+@keyframes shineMove {
+  0% { left: -100%; }
+  60% { left: 200%; }
+  100% { left: 200%; }
+}

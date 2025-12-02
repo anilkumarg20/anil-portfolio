@@ -1,0 +1,88 @@
+.skills-container {
+  width: 90%;
+  min-height: 100vh;
+  padding: 120px 5%;
+  background: #0a0f1f;
+  color: white;
+  overflow-x: hidden; /* Fix overflow */
+}
+
+/* Title */
+.skills-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skills-title span {
+  color: #00aaff;
+}
+
+/* Subtext */
+.skills-subtext {
+  text-align: center;
+  font-size: 17px;
+  color: #c4c4c4;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Skill Cards Grid */
+.skills-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 40px rgba(0, 150, 255, 0.12);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 0px 60px rgba(0, 150, 255, 0.2);
+}
+
+/* Card Title */
+.skill-card-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00aaff;
+}
+
+/* Skill Pills */
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 14px;
+  color: #e8e8e8;
+  transition: 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: #00aaff;
+  color: black;
+}

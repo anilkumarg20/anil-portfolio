@@ -1,0 +1,96 @@
+.projects-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 0px;
+  background: radial-gradient(circle at top, #1a1b3a, #0f1024);
+  color: #fff;
+}
+
+/* Title */
+.projects-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Subtext */
+.projects-subtext {
+  text-align: center;
+  color: #c7c7c7;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Grid */
+.projects-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  transition: 0.3s ease-in-out;
+  margin: 25px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(74, 108, 247, 0.25);
+  border-color: #4A6CF7;
+}
+
+/* Title */
+.project-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Description */
+.project-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6d6d6;
+  margin-bottom: 18px;
+}
+
+/* Tech badges */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-item {
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Link */
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 16px;
+  background: #6f8dff;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-link:hover {
+  background: #8da4ff;
+}

@@ -1,0 +1,277 @@
+/* ============================================================= */
+/* MAIN PAGE LAYOUT                                              */
+/* ============================================================= */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 80px;
+  background: #0b0e13;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* ============================================================= */
+/* BACKGROUND PARTICLES                                           */
+/* ============================================================= */
+.particles::before,
+.particles::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #00e1ff;
+  border-radius: 50%;
+  box-shadow: 
+    100px 200px #00e1ff55,
+    300px 400px #00e1ff33,
+    700px 200px #00e1ff44,
+    900px 100px #00e1ff55,
+    1200px 300px #00e1ff33;
+  animation: moveParticles 18s linear infinite;
+}
+
+@keyframes moveParticles {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-400px); }
+}
+
+/* ============================================================= */
+/* LEFT SIDE TEXT                                                 */
+/* ============================================================= */
+.home-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.typing-text {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00e1ff;
+  animation: typing 3s steps(20) forwards, cursor 0.5s infinite;
+}
+
+@keyframes typing { from { width: 0%; } to { width: 100%; } }
+@keyframes cursor { 50% { border-color: transparent; } }
+
+.typing-text span {
+  background: linear-gradient(90deg, #00e1ff, #0087ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.role {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.highlight {
+  color: #00e1ff;
+  font-size: 20px;
+  margin-top: 5px;
+  display: block;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* ============================================================= */
+/* BUTTONS WITH ANIMATION                                        */
+/* ============================================================= */
+.btn-primary {
+  padding: 14px 36px;
+  background: linear-gradient(120deg, #00e1ff, #005b68);
+  border-radius: 8px;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  opacity: 0.5;
+  transform: skewX(-25deg);
+  animation: shineMove 3s infinite;
+}
+
+@keyframes shineMove {
+  0%   { left: -100%; }
+  60%  { left: 200%; }
+  100% { left: 200%; }
+}
+
+.btn-secondary {
+  padding: 14px 36px;
+  border: 2px solid #00e1ff;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #00e1ff;
+}
+
+/* ============================================================= */
+/* PROFILE IMAGE + FLOAT + RING                                   */
+/* ============================================================= */
+.home-profile {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center; /* center everything */
+  align-items: center;
+}
+
+.ring {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 3px dashed #00e1ff55;
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* behind the image */
+}
+.profile-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 4px solid #00e1ff;
+  box-shadow: 0 0 40px #00e1ff44;
+}
+
+/* ============================================================= */
+/* FLOATING TECH ICONS                                            */
+/* ============================================================= */
+.tech {
+  position: absolute;
+  width: 60px;
+  animation: floatIcon 6s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.react { top: -40px; left: 150px; }
+.js { bottom: -40px; left: 160px; animation-delay: 0.5s; }
+.python { top: 90px; right: -60px; animation-delay: 1s; }
+.mysql { bottom: 90px; right: -70px; animation-delay: 1.5s; }
+.wordpress { top: -50px; right: 80px; animation-delay: 2s; }
+
+/* ============================================================= */
+/* MOBILE RESPONSIVE                                              */
+/* ============================================================= */
+@media (max-width: 900px) {
+  .home-container {
+    padding: 80px 40px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .home-profile {
+    margin-top: 30px;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ring {
+    width: 300px;
+    height: 300px;
+    top: 100px;
+    left: -20px;
+  }
+
+  .typing-text {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .role {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .highlight {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .tech {
+    width: 40px;
+  }
+
+  .react { top: -20px; left: 80px; }
+  .js { bottom: -20px; left: 80px; }
+  .python { top: 50px; right: -30px; }
+  .mysql { bottom: 50px; right: -30px; }
+  .wordpress { top: -20px; right: 40px; }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 60px 20px;
+  }
+
+  .typing-text {
+    font-size: 32px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .highlight {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ring {
+    width: 220px;
+    height: 220px;
+    top: -15px;
+    left: 30px;
+  }
+
+  .tech {
+    width: 30px;
+  }
+
+  .react { top: -15px; left: 60px; }
+  .js { bottom: -15px; left: 60px; }
+  .python { top: 40px; right: -20px; }
+  .mysql { bottom: 40px; right: -20px; }
+  .wordpress { top: -15px; right: 30px; }
+}

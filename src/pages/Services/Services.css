@@ -1,0 +1,61 @@
+.services-page {
+  padding: 80px 20px;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #0a0f1f; /* Dark background to match site */
+}
+
+.services-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff; /* White for high contrast */
+}
+
+.services-subtext {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #9aa5b1; /* Light gray, matches footer/nav text */
+}
+
+.services-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Individual service card */
+.service-card {
+  background: rgba(0, 225, 255, 0.05); /* Neon-blue tinted card */
+  padding: 30px 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 225, 255, 0.2); /* Neon blue border */
+  transition: 0.3s ease-in-out;
+  margin: 25px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 225, 255, 0.25); /* Neon glow on hover */
+}
+
+.service-icon {
+  font-size: 46px;
+  margin-bottom: 12px;
+  color: #00e1ff; /* Neon blue icons */
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00e1ff; /* Neon blue titles */
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 16px;
+  color: #cfd8e3; /* Light gray text */
+  line-height: 1.5;
+}
