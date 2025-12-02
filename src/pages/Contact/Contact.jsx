@@ -54,8 +54,8 @@ export default function Contact() {
           </p>
 
           <div className="social-links">
-            <a href="www.linkedin.com/in/anil-kumar-gosipothula" className="social-btn">LinkedIn</a>
-            <a href="#" className="social-btn">GitHub</a>
+           <a href="https://www.linkedin.com/in/anil-kumar-gosipothula/" className="social-btn">LinkedIn</a>
+            <a href="https://github.com/anilkumarg20/" className="social-btn">GitHub</a>
             <a href="#" className="social-btn">Instagram</a>
           </div>
         </motion.div>
@@ -90,3 +90,4 @@ export default function Contact() {
     </div>
   );
 }
+
